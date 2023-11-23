@@ -75,6 +75,32 @@ nav {
    animation: spin_words 6s infinite;
 }
 
+#skills {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   text-align: center;
+}
+
+.skill-grid {
+   justify-content: center;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+}
+
+.skill-card {
+   outline: 2px solid white;
+   padding: 10px 20px;
+   margin: 10px 10px;
+   border-radius: 12px;
+}
+
+.skill-card:hover {
+   background-color: white;
+   color: black;
+}
+
 @keyframes spin_words{
    10%{
        transform: translateY(-112%);
@@ -117,6 +143,6 @@ nav {
    }
 
    .words span {
-      animation: none;
+      /* animation: none; */
    }
  }
