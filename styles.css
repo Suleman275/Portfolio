@@ -7,8 +7,16 @@
 body {
    font-family: 'Montserrat', sans-serif;
    background-color: black;
+   /* background-image: url(bg.jpg);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;  */
    color: white;  
 }
+
+
+
+/* nav section */
 
 nav {
    display: flex;
@@ -40,17 +48,21 @@ nav {
    background-color: yellow;
 }
 
+/* About section */
+
 #about {
    margin-top: 50px;
    display: flex;
    flex-direction: row;
    align-items: center;
+   justify-content: center;
 }
 
 #about img {
    width: 300px;
    height: 300px;
    margin: 50px 100px;
+   mix-blend-mode:lighten;
 }
 
 .column {
@@ -61,6 +73,7 @@ nav {
    height: 70px;
    display: flex;
    font-size: 48px;
+   /* text-wrap: nowrap; */
 }
 
 .words{
@@ -73,32 +86,6 @@ nav {
    padding-left: 10px;
    color: yellow;
    animation: spin_words 6s infinite;
-}
-
-#skills {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   text-align: center;
-}
-
-.skill-grid {
-   justify-content: center;
-   display: flex;
-   flex-direction: row;
-   flex-wrap: wrap;
-}
-
-.skill-card {
-   outline: 2px solid white;
-   padding: 10px 20px;
-   margin: 10px 10px;
-   border-radius: 12px;
-}
-
-.skill-card:hover {
-   background-color: white;
-   color: black;
 }
 
 @keyframes spin_words{
@@ -128,7 +115,132 @@ nav {
    }
 }
 
+/* Skills section */
+
+#skills {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   text-align: center;
+}
+
+.skill-grid {
+   justify-content: center;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+}
+
+.skill-card {
+   outline: 2px solid white;
+   padding: 10px 20px;
+   margin: 10px 10px;
+   border-radius: 12px;
+   background-color: rgba(0, 0, 0, 0.4);
+}
+
+.skill-card:hover {
+   background-color: white;
+   color: black;
+}
+
+/* Projects Section */
+
+#projects {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+}
+
+.project-grid {
+   /* justify-content: center;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap; */
+   display: grid;
+   gap: 20px;
+   grid-template-columns: 1fr 1fr;
+   padding: 10px 20px;
+}
+
+.project-card {
+   outline: 2px solid white;
+   border-radius: 12px;
+   padding: 10px 5px;
+   display: flex;
+   flex-direction: column;
+   text-align: left;
+   text-decoration: none;
+   color: white;
+}
+
+.project-title {
+   font-size: 24px;
+   margin-bottom: 10px;
+   color: yellow;
+   font-weight: bold;
+}
+
+.project-skill-row {
+   margin-top: 10px;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+}
+
+.project-skill {
+   margin-top: 10px;
+   margin-right: 10px;
+   padding: 10px 5px;
+   outline: 2px solid white;
+   border-radius: 6px;
+}
+
+.more-btn {
+   text-decoration: none;
+   width: fit-content;
+   color: white;
+   outline: 2px solid white;
+   padding: 10px 20px;
+   border-radius: 12px;
+   margin: 10px 10px;
+}
+
+.more-btn:hover {
+   background-color: white;
+   color: black;
+}
+
+/* contact section */
+
+#contact {
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+   #about img {
+      width: 300px;
+      height: 300px;
+      margin: 25px 50px;
+   }
+}
+
+@media screen and (max-width: 912px) {
+   .wrapper {
+      font-size: 30px;
+   }
+}
+
 @media screen and (max-width: 768px) {
+
+   .link {
+      /* display: none; */
+   }
+
    #about {
       flex-direction: column;
    }
@@ -138,6 +250,10 @@ nav {
       height: 250px;
    }
 
+   #about h2 {
+      text-align: center;
+   }
+
    .wrapper {
       font-size: 36px;
    }
@@ -145,4 +261,26 @@ nav {
    .words span {
       /* animation: none; */
    }
+
+   .project-grid {
+      grid-template-columns: 1fr;
+   }
  }
+
+ @media screen and (max-width: 540px) {
+
+   .link {
+      display: none;
+   }
+}
+
+ @media screen and (max-width: 450px) {
+   .link {
+      display: none;
+   }
+   
+   .wrapper {
+      height: 40px;
+      font-size: 24px;
+   }
+  }
