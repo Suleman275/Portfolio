@@ -1,9 +1,7 @@
-html {
-   box-sizing: border-box;
-}
-
 *, *:before, *:after {
-   box-sizing: inherit;
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
 }
 
 body {
@@ -26,6 +24,10 @@ nav {
    text-decoration: none;
 }
 
+.link:hover {
+   color: yellow;
+}
+
 .btn {
    color: black;
    background-color: white;
@@ -35,5 +37,86 @@ nav {
 }
 
 .btn:hover {
-   background-color: orange;
+   background-color: yellow;
 }
+
+#about {
+   margin-top: 50px;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+}
+
+#about img {
+   width: 300px;
+   height: 300px;
+   margin: 50px 100px;
+}
+
+.column {
+   flex-direction: column;
+}
+
+.wrapper{
+   height: 70px;
+   display: flex;
+   font-size: 48px;
+}
+
+.words{
+   overflow: hidden;
+}
+
+.words span{
+   display: block;
+   height: 100%;
+   padding-left: 10px;
+   color: yellow;
+   animation: spin_words 6s infinite;
+}
+
+@keyframes spin_words{
+   10%{
+       transform: translateY(-112%);
+   }
+   25%{
+       transform: translateY(-100%);
+   }
+   35%{
+       transform: translateY(-212%);
+   }
+   50%{
+       transform: translateY(-200%);
+   }
+   60%{
+       transform: translateY(-312%);
+   }
+   75%{
+       transform: translateY(-300%);
+   }
+   85%{
+       transform: translateY(-412%);
+   }
+   100%{
+       transform: translateY(-400%);
+   }
+}
+
+@media screen and (max-width: 768px) {
+   #about {
+      flex-direction: column;
+   }
+
+   #about img {
+      width: 250px;
+      height: 250px;
+   }
+
+   .wrapper {
+      font-size: 36px;
+   }
+
+   .words span {
+      animation: none;
+   }
+ }
