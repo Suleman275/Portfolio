@@ -171,7 +171,7 @@ nav {
    padding: 10px 5px;
    display: flex;
    flex-direction: column;
-   text-align: left;
+   text-align: center;
    text-decoration: none;
    color: white;
 }
@@ -186,6 +186,7 @@ nav {
 .project-skill-row {
    margin-top: 10px;
    display: flex;
+   justify-content: center;
    flex-direction: row;
    flex-wrap: wrap;
 }
@@ -193,6 +194,7 @@ nav {
 .project-skill {
    margin-top: 10px;
    margin-right: 10px;
+   text-align: center;
    padding: 10px 5px;
    outline: 2px solid white;
    border-radius: 6px;
