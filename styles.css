@@ -166,14 +166,29 @@ nav {
 }
 
 .project-card {
+   justify-content: space-between;
    outline: 2px solid white;
    border-radius: 12px;
    padding: 10px 5px;
    display: flex;
+   margin-bottom: 10px;
    flex-direction: column;
    text-align: center;
    text-decoration: none;
    color: white;
+}
+
+.project-card:hover {
+   background-color: white;
+   color: black;
+}
+
+.project-card:hover .project-title {
+   color: black;
+}
+
+.project-card:hover .project-skill {
+   outline: 2px solid black;
 }
 
 .project-title {
