@@ -214,8 +214,7 @@ nav img {
 }
 
 .project-skill {
-   margin-top: 10px;
-   margin-right: 10px;
+   margin: 10px 5px;
    text-align: center;
    padding: 10px 5px;
    outline: 2px solid white;
@@ -295,6 +294,11 @@ nav img {
 }
 
 @media screen and (max-width: 768px) {
+
+   nav img {
+      width: 50px;
+      height: 50px;
+   }
 
    .link {
       /* display: none; */
